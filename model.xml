@@ -1,5 +1,14 @@
 <mujoco>
+    <asset>
+        <!-- チェッカーボードのテクスチャを定義 -->
+        <texture name='chessboard' type='2d' builtin='checker' width='512' height='512' rgb1='0.1 0.3 0.8' rgb2='0 0 0'/>
+        <material name='mat_chessboard' texture='chessboard' texrepeat='10 10' texuniform='true'/>
+    </asset>
     <worldbody>
+        <!--Ground plane-->
+        <geom name='floor' type='plane' size='10 10 0.1' material='mat_chessboard'/>
+
+        <!--Example body (ball)-->
         <body name='ball' pos='0 0 1'>
             <freejoint/>
             <geom size='0.1' type='sphere' rgba='0.7 0.2 0.2 1'/>
