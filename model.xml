@@ -9,9 +9,9 @@
         <geom name='floor' type='plane' size='10 10 0.1' material='mat_chessboard'/>
 
         <!--Example body (ball)-->
-        <body name='ball' pos='0 0 1'>
+        <body name='ball' pos='0 0 2'>
             <freejoint/>
-            <geom size='0.1' type='sphere' rgba='0.7 0.2 0.2 1'/>
+            <geom size='0.1' type='sphere' rgba='0.2 0.7 0.2 1'/>
         </body>
     </worldbody>
 </mujoco>
