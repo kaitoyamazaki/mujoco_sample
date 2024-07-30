@@ -1,0 +1,15 @@
+<mujoco>
+    <asset>
+        <texture name="grid" type="2d" builtin="checker" rgb1=".1 .2 .3" rgb2=".2 .3 .4" width="300" height="300"/>
+        <material name="grid" texture="grid" texrepeat="8 8" reflectance=".2"/>
+    </asset>
+    <worldbody>
+        <geom name="floor" type="plane" size="8 8 .1" material="grid" solref=".02 1" solimp=".99 .99 .001"/>
+        <light name="top" pos="0 0 2" diffuse="1 1 1" specular=".5 .5 .5" attenuation=".1 .1 .1"/>
+
+        <body name="box" pos="0 0 1">
+            <freejoint/>
+            <geom type="box" size=".1 .1 .1" rgba="0.2 0.7 0.2 1"/>
+        </body>
+    </worldbody>
+</mujoco>
