@@ -1,0 +1,24 @@
+<mujoco model="simple_arm">
+    <default>
+        <!-- Fusion 360 の座標系を MuJoCo に変換します -->
+        <geom type="mesh" xyaxes="1 0 0 0 0 1"/>
+    </default>
+
+    <asset>
+        <mesh name="base" file="stl/base.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="link1" file="stl/link1.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="link2" file="stl/link2.stl" scale="0.001 0.001 0.001"/>
+    </asset>
+
+    <worldbody>
+        <body name="base">
+            <geom mesh="base"/>
+            <body name="link1">
+                <geom mesh="link1"/>
+                <body name="link2">
+                    <geom mesh="link2"/>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+</mujoco>
