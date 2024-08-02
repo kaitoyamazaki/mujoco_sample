@@ -1,3 +1,3 @@
-/home/wanglab/study/mujoco_sample/build/CMakeFiles/MuJoCoSim.dir
-/home/wanglab/study/mujoco_sample/build/CMakeFiles/edit_cache.dir
-/home/wanglab/study/mujoco_sample/build/CMakeFiles/rebuild_cache.dir
+/home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles/mujoco.dir
+/home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles/edit_cache.dir
+/home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles/rebuild_cache.dir

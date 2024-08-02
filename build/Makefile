@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wanglab/study/mujoco_sample
+CMAKE_SOURCE_DIR = /home/kaito/study/MuJoCo/mujoco_sample
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wanglab/study/mujoco_sample/build
+CMAKE_BINARY_DIR = /home/kaito/study/MuJoCo/mujoco_sample/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanglab/study/mujoco_sample/build/CMakeFiles /home/wanglab/study/mujoco_sample/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles /home/kaito/study/MuJoCo/mujoco_sample/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wanglab/study/mujoco_sample/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MuJoCoSim
+# Target rules for targets named mujoco
 
 # Build rule for target.
-MuJoCoSim: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MuJoCoSim
-.PHONY : MuJoCoSim
+mujoco: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mujoco
+.PHONY : mujoco
 
 # fast build rule for target.
-MuJoCoSim/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MuJoCoSim.dir/build.make CMakeFiles/MuJoCoSim.dir/build
-.PHONY : MuJoCoSim/fast
+mujoco/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/build
+.PHONY : mujoco/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MuJoCoSim.dir/build.make CMakeFiles/MuJoCoSim.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MuJoCoSim.dir/build.make CMakeFiles/MuJoCoSim.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MuJoCoSim.dir/build.make CMakeFiles/MuJoCoSim.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MuJoCoSim"
+	@echo "... mujoco"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

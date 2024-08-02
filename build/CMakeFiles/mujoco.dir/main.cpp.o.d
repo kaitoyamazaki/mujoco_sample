@@ -1,6 +1,7 @@
-CMakeFiles/MuJoCoSim.dir/main.cpp.o: \
- /home/wanglab/study/mujoco_sample/main.cpp /usr/include/stdc-predef.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mujoco.h \
+CMakeFiles/mujoco.dir/main.cpp.o: \
+ /home/kaito/study/MuJoCo/mujoco_sample/main.cpp \
+ /usr/include/stdc-predef.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mujoco.h \
  /usr/include/c++/11/stdlib.h /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -59,19 +60,19 @@ CMakeFiles/MuJoCoSim.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjdata.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjdata.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjtnum.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjmodel.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjthread.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjexport.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjmacro.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjplugin.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjvisualize.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjrender.h \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjspec.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjtnum.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjmodel.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjthread.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjexport.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjmacro.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjplugin.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjvisualize.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjrender.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjspec.h \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
@@ -149,7 +150,7 @@ CMakeFiles/MuJoCoSim.dir/main.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/wanglab/.mujoco/mujoco-3.2.0/include/mujoco/mjui.h \
+ /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mjui.h \
  /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h /usr/include/c++/11/iostream \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \

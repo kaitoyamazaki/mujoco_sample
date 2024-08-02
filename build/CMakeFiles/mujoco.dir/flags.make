@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/wanglab/study/mujoco_sample/include -I/home/wanglab/.mujoco/mujoco-3.2.0/include
+CXX_INCLUDES = -I/home/kaito/study/MuJoCo/mujoco_sample/include -I/home/kaito/.mujoco/mujoco-3.2.0/include
 
 CXX_FLAGS = -std=gnu++11
 

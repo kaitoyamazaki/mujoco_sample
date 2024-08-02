@@ -1,4 +1,4 @@
-# Install script for directory: /home/wanglab/study/mujoco_sample
+# Install script for directory: /home/kaito/study/MuJoCo/mujoco_sample
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wanglab/study/mujoco_sample/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kaito/study/MuJoCo/mujoco_sample/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

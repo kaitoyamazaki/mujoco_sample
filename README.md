@@ -55,10 +55,9 @@ source ~/.bashrc
 
 ```
 git clone https://github.com/kaitoyamazaki/mujoco_sample.git
-cd mujoco_sample/build
-cmake ..
-make
-./MuJoCoSim ../model.xml
+cd mujoco_sample
+chmod +x make.bash
+./make.bash
 ```
 
 # ドキュメント
