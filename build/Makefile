@@ -129,29 +129,29 @@ mujoco/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/build
 .PHONY : mujoco/fast
 
-unko.o: unko.cpp.o
-.PHONY : unko.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-unko.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/unko.cpp.o
-.PHONY : unko.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-unko.i: unko.cpp.i
-.PHONY : unko.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-unko.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/unko.cpp.i
-.PHONY : unko.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-unko.s: unko.cpp.s
-.PHONY : unko.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-unko.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/unko.cpp.s
-.PHONY : unko.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mujoco"
-	@echo "... unko.o"
-	@echo "... unko.i"
-	@echo "... unko.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
