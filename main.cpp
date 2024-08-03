@@ -99,8 +99,13 @@ void simulate(const char* filename) {
     mjv_defaultOption(&opt);
     mjv_defaultScene(&scn);
     mjr_defaultContext(&con);
+
     mjv_makeScene(m, &scn, 2000);
     mjr_makeContext(m, &con, mjFONTSCALE_150);
+
+    opt.flags[mjVIS_CONTACTPOINT] = 1;
+    opt.flags[mjVIS_CONTACTFORCE] = 1;
+    opt.flags[mjVIS_CONSTRAINT] = 1;
 
     // コールバック関数を設定
     glfwSetMouseButtonCallback(window, mouse_button);
