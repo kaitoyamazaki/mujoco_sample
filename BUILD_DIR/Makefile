@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/kaito/study/MuJoCo/mujoco_sample
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaito/study/MuJoCo/mujoco_sample/build
+CMAKE_BINARY_DIR = /home/kaito/study/MuJoCo/mujoco_sample/BUILD_DIR
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles /home/kaito/study/MuJoCo/mujoco_sample/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaito/study/MuJoCo/mujoco_sample/BUILD_DIR/CMakeFiles /home/kaito/study/MuJoCo/mujoco_sample/BUILD_DIR//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaito/study/MuJoCo/mujoco_sample/BUILD_DIR/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,29 @@ mujoco/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/build
 .PHONY : mujoco/fast
 
-unko.o: unko.cpp.o
-.PHONY : unko.o
+contact_force.o: contact_force.cpp.o
+.PHONY : contact_force.o
 
 # target to build an object file
-unko.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/unko.cpp.o
-.PHONY : unko.cpp.o
+contact_force.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/contact_force.cpp.o
+.PHONY : contact_force.cpp.o
 
-unko.i: unko.cpp.i
-.PHONY : unko.i
+contact_force.i: contact_force.cpp.i
+.PHONY : contact_force.i
 
 # target to preprocess a source file
-unko.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/unko.cpp.i
-.PHONY : unko.cpp.i
+contact_force.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/contact_force.cpp.i
+.PHONY : contact_force.cpp.i
 
-unko.s: unko.cpp.s
-.PHONY : unko.s
+contact_force.s: contact_force.cpp.s
+.PHONY : contact_force.s
 
 # target to generate assembly for a file
-unko.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/unko.cpp.s
-.PHONY : unko.cpp.s
+contact_force.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco.dir/build.make CMakeFiles/mujoco.dir/contact_force.cpp.s
+.PHONY : contact_force.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mujoco"
-	@echo "... unko.o"
-	@echo "... unko.i"
-	@echo "... unko.s"
+	@echo "... contact_force.o"
+	@echo "... contact_force.i"
+	@echo "... contact_force.s"
 .PHONY : help
 
 

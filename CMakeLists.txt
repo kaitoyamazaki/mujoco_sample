@@ -8,5 +8,7 @@ link_directories(~/.mujoco/mujoco-3.2.0/bin)
 
 find_package(glfw3 REQUIRED)
 
-add_executable(mujoco main.cpp)
+set(SOURCE_FILE "main.cpp" CACHE STRING "Source file to compile")
+
+add_executable(mujoco ${SOURCE_FILE})
 target_link_libraries(mujoco glfw ~/.mujoco/mujoco-3.2.0/lib/libmujoco.so GL)

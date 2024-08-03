@@ -76,25 +76,75 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     }
 }
 
+void print_contact_forces(){
+    // 現在の接触数を取得
+    int ncon = d->ncon;
+
+    // 各接触についてループ
+    for (int i = 0; i < ncon; i++){
+        // i番目の接触を取得
+        mjContact* contact = &d->contact[i];
+
+        // 接触力を取得
+        mjtNum force[6];
+        mju_zero(force, 6);
+        mj_contactForce(m, d, i, force);
+
+        // 接触フレーム：法線はz軸、接線はxとy
+        // force[0]とforce[1]は接線方向の力
+        // force[2]は法線方向の力
+        //std::cout << "Contact " << i << ": Force = (" 
+        //<< force[0] << ", " << force[1] << ", " << force[2] << ")" << std::endl;
+
+        // 接触法線をグローバルフレームで取得
+        mjtNum normal[3];
+        normal[0] = contact->frame[0];
+        normal[1] = contact->frame[1];
+        normal[2] = contact->frame[2];
+
+        //std::cout << "Contact " << i << ": Normal = ("
+        //<< normal[0] << ", " << normal[1] << ", " << normal[2] << ")" << std::endl;
+
+        // 法線方向の力をグローバルフレームに変換
+        mjtNum global_force[3];
+        global_force[0] = force[0] * normal[0];
+        global_force[1] = force[0] * normal[1];
+        global_force[2] = force[0] * normal[2];
+
+        std::cout << "Contact " << i << ": Force = ("
+        << global_force[0] << ", " << global_force[1] << ", " << global_force[2] << ")" << std::endl;
+    }
+}
+
 void simulate(const char* filename) {
+    // モデルを読み込む
     m = mj_loadXML(filename, nullptr, nullptr, 0);
     if (!m) {
         std::cerr << "Error loading model" << std::endl;
         return;
     }
     d = mj_makeData(m);
+
+    // GLFWの初期化
     if (!glfwInit()) {
         std::cerr << "Could not initialize GLFW" << std::endl;
+        mj_deleteModel(m); // モデルをクリーンアップ
         return;
     }
+
+    // ウィンドウの作成
     GLFWwindow* window = glfwCreateWindow(1200, 900, "Simulate", NULL, NULL);
     if (!window) {
         std::cerr << "Could not create GLFW window" << std::endl;
         glfwTerminate();
+        mj_deleteData(d);  // データをクリーンアップ
+        mj_deleteModel(m); // モデルをクリーンアップ
         return;
     }
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
+
+    // MuJoCoの設定を初期化
     mjv_defaultCamera(&cam);
     mjv_defaultOption(&opt);
     mjv_defaultScene(&scn);
@@ -102,26 +152,41 @@ void simulate(const char* filename) {
     mjv_makeScene(m, &scn, 2000);
     mjr_makeContext(m, &con, mjFONTSCALE_150);
 
+    // 視覚化オプションを設定
+    opt.flags[mjVIS_CONTACTPOINT] = 1;
+    opt.flags[mjVIS_CONTACTFORCE] = 1;
+    opt.flags[mjVIS_CONSTRAINT] = 1;
+
     // コールバック関数を設定
     glfwSetMouseButtonCallback(window, mouse_button);
     glfwSetCursorPosCallback(window, mouse_move);
     glfwSetScrollCallback(window, scroll);
     glfwSetKeyCallback(window, key_callback);
 
+    // メインループ
     while (!glfwWindowShouldClose(window)) {
-        mj_step(m, d);
+        mj_step(m, d);  // シミュレーションを1ステップ進める
+        print_contact_forces();  // 接触力を出力
+
+        // ビューポートを設定
         mjrRect viewport = {0, 0, 0, 0};
         glfwGetFramebufferSize(window, &viewport.width, &viewport.height);
+
+        // シーンを更新してレンダリング
         mjv_updateScene(m, d, &opt, nullptr, &cam, mjCAT_ALL, &scn);
         mjr_render(viewport, &scn, &con);
+
+        // バッファのスワップとイベントのポーリング
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
+    // リソースを解放
     mjv_freeScene(&scn);
     mjr_freeContext(&con);
     mj_deleteData(d);
     mj_deleteModel(m);
+    glfwDestroyWindow(window);
     glfwTerminate();
 }
 

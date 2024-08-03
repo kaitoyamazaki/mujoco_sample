@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/kaito/study/MuJoCo/mujoco_sample/build",
+  "command": "/usr/bin/c++  -I/home/kaito/study/MuJoCo/mujoco_sample/include -I/home/kaito/.mujoco/mujoco-3.2.0/include -g -std=gnu++11 -o CMakeFiles/mujoco.dir/unko.cpp.o -c /home/kaito/study/MuJoCo/mujoco_sample/unko.cpp",
+  "file": "/home/kaito/study/MuJoCo/mujoco_sample/unko.cpp"
+}
+]
