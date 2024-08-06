@@ -69,28 +69,28 @@ include CMakeFiles/mujoco.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mujoco.dir/flags.make
 
-CMakeFiles/mujoco.dir/test.cpp.o: CMakeFiles/mujoco.dir/flags.make
-CMakeFiles/mujoco.dir/test.cpp.o: ../test.cpp
-CMakeFiles/mujoco.dir/test.cpp.o: CMakeFiles/mujoco.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mujoco.dir/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mujoco.dir/test.cpp.o -MF CMakeFiles/mujoco.dir/test.cpp.o.d -o CMakeFiles/mujoco.dir/test.cpp.o -c /home/kaito/study/MuJoCo/mujoco_sample/test.cpp
+CMakeFiles/mujoco.dir/sample2.cpp.o: CMakeFiles/mujoco.dir/flags.make
+CMakeFiles/mujoco.dir/sample2.cpp.o: ../sample2.cpp
+CMakeFiles/mujoco.dir/sample2.cpp.o: CMakeFiles/mujoco.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kaito/study/MuJoCo/mujoco_sample/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mujoco.dir/sample2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mujoco.dir/sample2.cpp.o -MF CMakeFiles/mujoco.dir/sample2.cpp.o.d -o CMakeFiles/mujoco.dir/sample2.cpp.o -c /home/kaito/study/MuJoCo/mujoco_sample/sample2.cpp
 
-CMakeFiles/mujoco.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mujoco.dir/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaito/study/MuJoCo/mujoco_sample/test.cpp > CMakeFiles/mujoco.dir/test.cpp.i
+CMakeFiles/mujoco.dir/sample2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mujoco.dir/sample2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaito/study/MuJoCo/mujoco_sample/sample2.cpp > CMakeFiles/mujoco.dir/sample2.cpp.i
 
-CMakeFiles/mujoco.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mujoco.dir/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaito/study/MuJoCo/mujoco_sample/test.cpp -o CMakeFiles/mujoco.dir/test.cpp.s
+CMakeFiles/mujoco.dir/sample2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mujoco.dir/sample2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaito/study/MuJoCo/mujoco_sample/sample2.cpp -o CMakeFiles/mujoco.dir/sample2.cpp.s
 
 # Object files for target mujoco
 mujoco_OBJECTS = \
-"CMakeFiles/mujoco.dir/test.cpp.o"
+"CMakeFiles/mujoco.dir/sample2.cpp.o"
 
 # External object files for target mujoco
 mujoco_EXTERNAL_OBJECTS =
 
-mujoco: CMakeFiles/mujoco.dir/test.cpp.o
+mujoco: CMakeFiles/mujoco.dir/sample2.cpp.o
 mujoco: CMakeFiles/mujoco.dir/build.make
 mujoco: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 mujoco: ~/.mujoco/mujoco-3.2.0/lib/libmujoco.so
