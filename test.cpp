@@ -23,6 +23,7 @@ bool dragging = false;       // ドラッグ状態を保持
 int selected_geom = -1;      // 選択されたジオメトリID
 int selected_body = -1;      // 選択されたボディID
 bool is_perturb = false;     // 物体の選択状態を保持
+mjtNum initial_pos[3];       // 選択時の初期位置
 std::chrono::time_point<std::chrono::steady_clock> last_click_time; // 最後のクリック時間
 
 // マウスボタンコールバック
@@ -65,6 +66,9 @@ void mouse_button(GLFWwindow* window, int button, int act, int mods) {
                     pert.active = mjPERT_TRANSLATE;
                     pert.select = selbody;
                     mju_copy3(pert.localpos, selpnt);
+
+                    // 初期位置の保存
+                    mju_copy3(initial_pos, d->xpos + 3 * selbody);
                 }
             }
         }
@@ -112,6 +116,16 @@ void mouse_move(GLFWwindow* window, double xpos, double ypos) {
     if (dragging && selected_geom >= 0 && is_perturb) {
         // move perturb object
         mjv_movePerturb(m, d, action, dx / height, dy / height, &scn, &pert);
+        // 相対位置の計算
+        mjtNum displacement[3];
+        mju_addToScl3(displacement, pert.localpos, dx / height);
+        mju_addToScl3(displacement, pert.localpos, dy / height);
+        // 新しい位置を計算
+        mjtNum new_pos[3];
+        mju_add3(new_pos, initial_pos, displacement);
+        // 新しい位置を設定
+        mju_copy3(d->xpos + 3 * selected_body, new_pos);
+        mju_copy3(d->xipos + 3 * selected_body, new_pos);
     } else {
         // move camera
         mjv_moveCamera(m, action, dx / height, dy / height, &scn, &cam);
