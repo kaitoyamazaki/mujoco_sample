@@ -1,5 +1,5 @@
-CMakeFiles/mujoco.dir/main.cpp.o: \
- /home/kaito/study/MuJoCo/mujoco_sample/main.cpp \
+CMakeFiles/mujoco.dir/test.cpp.o: \
+ /home/kaito/study/MuJoCo/mujoco_sample/test.cpp \
  /usr/include/stdc-predef.h \
  /home/kaito/.mujoco/mujoco-3.2.0/include/mujoco/mujoco.h \
  /usr/include/c++/11/stdlib.h /usr/include/c++/11/cstdlib \
@@ -173,4 +173,6 @@ CMakeFiles/mujoco.dir/main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h

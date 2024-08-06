@@ -6,7 +6,8 @@
     </asset>
     <worldbody>
         <!--Ground plane-->
-        <geom name='floor' type='plane' size='10 10 0.1' material='mat_chessboard'/>
+        <geom name='floor' type='plane' size='5 5 0.1' material='mat_chessboard'/>
+        <light name="top" pos="0 0 2" diffuse="1 1 1" specular=".5 .5 .5" attenuation=".1 .1 .1"/>
 
         <!--Example body (ball)-->
         <body name='ball' pos='0 0 2'>

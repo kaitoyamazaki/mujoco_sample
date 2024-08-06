@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mujoco.dir/main.cpp.o"
-  "CMakeFiles/mujoco.dir/main.cpp.o.d"
+  "CMakeFiles/mujoco.dir/test.cpp.o"
+  "CMakeFiles/mujoco.dir/test.cpp.o.d"
   "mujoco"
   "mujoco.pdb"
 )
